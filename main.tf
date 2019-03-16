@@ -1,26 +1,22 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_vpc" "main" {
-  cidr_block           = "10.0.0.0/16"
+  cidr_block           = var.vpc_cidr
   enable_dns_support   = true
   enable_dns_hostnames = true
 
   tags = {
     Name        = "main-vpc"
-    Environment = "dev"
-    Project     = "aws-terraform"
+    Environment = var.environment
+    Project     = var.project_name
   }
 }
 
 resource "aws_instance" "web" {
   ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   tags = {
     Name        = "web-server"
-    Environment = "dev"
-    Project     = "aws-terraform"
+    Environment = var.environment
+    Project     = var.project_name
   }
 }
