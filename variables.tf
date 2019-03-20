@@ -22,3 +22,8 @@ variable "project_name" {
   description = "Project name"
   default     = "aws-terraform"
 }
+
+variable "bucket_name" {
+  description = "S3 bucket name"
+  default     = "aws-terraform-demo-bucket-2019"
+}

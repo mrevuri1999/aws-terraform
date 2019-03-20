@@ -1,0 +1,5 @@
+aws_region    = "us-east-1"
+instance_type = "t2.micro"
+environment   = "dev"
+project_name  = "aws-terraform"
+bucket_name   = "aws-terraform-demo-bucket-2019"
