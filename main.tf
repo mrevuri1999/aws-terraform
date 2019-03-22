@@ -1,2 +1,3 @@
-# Core Terraform configuration has been split into layered files:
-# network.tf, compute.tf, security.tf, and storage.tf
+terraform {
+  required_version = ">= 0.11.0"
+}
