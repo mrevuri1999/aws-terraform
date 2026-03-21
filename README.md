@@ -1,8 +1,25 @@
-# AWS Terraform
+# AWS Terraform Infrastructure
 
-This repository contains basic Terraform code for learning AWS infrastructure.
+This repository contains a simple Terraform project for provisioning basic AWS infrastructure.
+It is intended as a starter project for learning how Terraform can be used to manage cloud resources.
 
-## Resources
+## Project Overview
+
+The configuration in this repository creates a small set of AWS resources that can be used as a basic infrastructure example.
+The project is organized into separate Terraform files for providers, variables, security, storage, outputs, and core resources.
+
+## Prerequisites
+
+Before using this project, make sure the following tools are installed:
+
+- Terraform
+- AWS CLI
+
+You should also have AWS credentials configured locally before running Terraform commands.
+
+## Infrastructure Resources
+
+This project currently creates the following resources:
 
 - VPC
 - Subnet
@@ -10,15 +27,33 @@ This repository contains basic Terraform code for learning AWS infrastructure.
 - Security group
 - S3 bucket
 
-## Notes
+## Terraform Commands
 
-This project is for practice with Terraform basics.
-Some values are still simple and hardcoded while learning.
-
-## Usage
+Initialize the working directory:
 
 ```bash
 terraform init
+```
+
+Review the execution plan:
+
+```bash
 terraform plan
+```
+
+Apply the configuration:
+
+```bash
 terraform apply
 ```
+
+Show outputs after apply:
+
+```bash
+terraform output
+```
+
+## Notes
+
+This repository is a simple Terraform practice project and is being improved step by step.
+Some resource settings are still basic to keep the project easy to understand.
